@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.time-select,
+.container-player,
+.rain-sun {
+    height: 80%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container-player {
+    position: relative;
+}
+
+svg {
+    position: absolute;
+    z-index: -1;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.time-display {
+    position: absolute;
+    bottom: 10%;
+    font-size: 45px;
+    color: white;
+}
+
+.video-container {
+    z-index: -3;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+
+button {
+    height: 10%;
+    width: 30%;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.time-select button {
+    transition: all 1s ease;
+}
+
+.time-select button:hover {
+    background-color: white;
+    color: black;
+}
+
+.rain-sun button {
+    border: none;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+.rain-sun button img {
+    height: 100%;
+}
+
+.container-player img {
+    cursor: pointer;
+}
+
+svg {
+    pointer-events: none;
+}
